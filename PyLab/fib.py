@@ -12,5 +12,5 @@ def fib(n: int):
         return b
 
 if __name__ == "__main__":
-    result = fib(10)
+    result = fib(100)
     print(f"The 10th Fibonacci number is: {result}")

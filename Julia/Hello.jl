@@ -1,3 +1,6 @@
+
+println("Hello,World!")
+
 # 分支
 x = 10
 if x > 5
@@ -23,6 +26,7 @@ open("output.txt", "r") do file
     println("文件内容：", content)
 end
 
+
 # 文本的显示
 println("Hello, World!")
 
@@ -32,3 +36,8 @@ function square(x)
 end
 
 println("5的平方是：", square(5))
+
+for i in 1:10
+    # Your code here
+    println(i^2);
+end
