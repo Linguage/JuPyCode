@@ -6,6 +6,7 @@ import matplotlib
 matplotlib.use('TkAgg')
 
 
+
 dataset = {}
 train_input, train_label = make_moons(
     n_samples=1000, shuffle=True, noise=0.1, random_state=None)
