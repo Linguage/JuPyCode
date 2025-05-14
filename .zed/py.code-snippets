@@ -1,0 +1,432 @@
+{
+    "Python Main Function": {
+        "prefix": "pymain",
+        "body": [
+            "def main():",
+            "    ${1:pass}",
+            "",
+            "",
+            "if __name__ == \"__main__\":",
+            "    main()"
+        ],
+        "description": "Python main function structure"
+    },
+    "Python If Statement": {
+        "prefix": "pyif",
+        "body": [
+            "if ${1:condition}:",
+            "    ${2:pass}"
+        ],
+        "description": "If statement"
+    },
+    "Python If-Else Statement": {
+        "prefix": "pyife",
+        "body": [
+            "if ${1:condition}:",
+            "    ${2:pass}",
+            "else:",
+            "    ${3:pass}"
+        ],
+        "description": "If-else statement"
+    },
+    "Python If-Elif-Else Statement": {
+        "prefix": "pyifee",
+        "body": [
+            "if ${1:condition1}:",
+            "    ${2:pass}",
+            "elif ${3:condition2}:",
+            "    ${4:pass}",
+            "else:",
+            "    ${5:pass}"
+        ],
+        "description": "If-elif-else statement"
+    },
+    "Python For Loop": {
+        "prefix": "pyfor",
+        "body": [
+            "for ${1:item} in ${2:iterable}:",
+            "    ${3:pass}"
+        ],
+        "description": "For loop"
+    },
+    "Python While Loop": {
+        "prefix": "pywhile",
+        "body": [
+            "while ${1:condition}:",
+            "    ${2:pass}"
+        ],
+        "description": "While loop"
+    },
+    "Python Try-Except": {
+        "prefix": "pytry",
+        "body": [
+            "try:",
+            "    ${1:pass}",
+            "except ${2:Exception} as ${3:e}:",
+            "    ${4:pass}"
+        ],
+        "description": "Try-except block"
+    },
+    "Python Try-Except-Finally": {
+        "prefix": "pytryf",
+        "body": [
+            "try:",
+            "    ${1:pass}",
+            "except ${2:Exception} as ${3:e}:",
+            "    ${4:pass}",
+            "finally:",
+            "    ${5:pass}"
+        ],
+        "description": "Try-except-finally block"
+    },
+    "Python Function Definition": {
+        "prefix": "pydef",
+        "body": [
+            "def ${1:function_name}(${2:parameters}):",
+            "    \"\"\"${3:Docstring for function.}\n\n    Args:\n        ${4:param1}: ${5:Description}\n\n    Returns:\n        ${6:Description}\n    \"\"\"",
+            "    ${7:pass}"
+        ],
+        "description": "Function definition with docstring"
+    },
+    "Python Class Definition": {
+        "prefix": "pyclass",
+        "body": [
+            "class ${1:ClassName}:",
+            "    \"\"\"${2:Docstring for class.}\"\"\"",
+            "    ",
+            "    def __init__(self${3:, parameters}):",
+            "        ${4:pass}",
+            "    ",
+            "    def ${5:method_name}(self${6:, parameters}):",
+            "        ${7:pass}"
+        ],
+        "description": "Class definition with docstring"
+    },
+    "NumPy Import": {
+        "prefix": "impnumpy",
+        "body": [
+            "import numpy as np"
+        ],
+        "description": "Import NumPy with standard alias"
+    },
+    "Pandas Import": {
+        "prefix": "imppandas",
+        "body": [
+            "import pandas as pd"
+        ],
+        "description": "Import Pandas with standard alias"
+    },
+    "Read CSV with Pandas": {
+        "prefix": "pdread",
+        "body": [
+            "df = pd.read_csv(\'${1:filename.csv}\'${2:, encoding=\'utf-8\'})"
+        ],
+        "description": "Read CSV file with pandas"
+    },
+    "Write CSV with Pandas": {
+        "prefix": "pdwrite",
+        "body": [
+            "df.to_csv(\'${1:filename.csv}\', index=${2:False}${3:, encoding=\'utf-8-sig\'})"
+        ],
+        "description": "Write DataFrame to CSV file"
+    },
+    "Excel Reader": {
+        "prefix": "pdexread",
+        "body": [
+            "df = pd.read_excel(\'${1:filename.xlsx}\'${2:, sheet_name=\'${3:Sheet1}\'})"
+        ],
+        "description": "Read Excel file with pandas"
+    },
+    "Excel Writer": {
+        "prefix": "pdexwrite",
+        "body": [
+            "with pd.ExcelWriter(\'${1:filename.xlsx}\', engine=\'xlsxwriter\') as writer:",
+            "    df.to_excel(writer, sheet_name=\'${2:Sheet1}\'${3:, index=False})"
+        ],
+        "description": "Write DataFrame to Excel file with xlsxwriter engine"
+    },
+    "DataFrame Creation": {
+        "prefix": "pddf",
+        "body": [
+            "df = pd.DataFrame({",
+            "    \'${1:column1}\': ${2:data1},",
+            "    \'${3:column2}\': ${4:data2}",
+            "})"
+        ],
+        "description": "Create a pandas DataFrame from dictionary"
+    },
+    "DataFrame Statistics": {
+        "prefix": "pdstats",
+        "body": [
+            "# 基本统计描述",
+            "summary = df.describe()",
+            "",
+            "# 计算均值",
+            "means = df.mean()",
+            "",
+            "# 计算中位数",
+            "medians = df.median()",
+            "",
+            "# 计算标准差",
+            "stds = df.std()"
+        ],
+        "description": "Calculate common statistics on DataFrame"
+    },
+    "DataFrame Group By": {
+        "prefix": "pdgroupby",
+        "body": [
+            "grouped = df.groupby([\"${1:column1}\"${2:, \"${3:column2}\"}])",
+            "result = grouped.${4:aggregate_function}()"
+        ],
+        "description": "Group DataFrame by columns and apply aggregation"
+    },
+    "DataFrame Sort": {
+        "prefix": "pdsort",
+        "body": [
+            "sorted_df = df.sort_values(by=\'${1:column}\', ascending=${2:False})"
+        ],
+        "description": "Sort DataFrame by column"
+    },
+    "NumPy Array Creation": {
+        "prefix": "nparray",
+        "body": [
+            "arr = np.array([${1:elements}])"
+        ],
+        "description": "Create a NumPy array"
+    },
+    "NumPy Linspace": {
+        "prefix": "nplinspace",
+        "body": [
+            "arr = np.linspace(${1:start}, ${2:stop}, ${3:num})"
+        ],
+        "description": "Create evenly spaced numbers over a specified interval"
+    },
+    "NumPy Arange": {
+        "prefix": "nparange",
+        "body": [
+            "arr = np.arange(${1:start}, ${2:stop}, ${3:step})"
+        ],
+        "description": "Create an array with evenly spaced values within a given interval"
+    },
+    "Data Cleansing": {
+        "prefix": "pdclean",
+        "body": [
+            "# 删除缺失值",
+            "df_clean = df.dropna()",
+            "",
+            "# 或者填充缺失值",
+            "df_filled = df.fillna(${1:value})",
+            "",
+            "# 删除重复行",
+            "df_unique = df.drop_duplicates()",
+            "",
+            "# 重置索引",
+            "df_reset = df.reset_index(drop=True)"
+        ],
+        "description": "Common data cleaning operations"
+    },
+    "DataFrame Column Selection": {
+        "prefix": "pdselect",
+        "body": [
+            "selected_df = df[[\"${1:column1}\", \"${2:column2}\"]]"
+        ],
+        "description": "Select specific columns from DataFrame"
+    },
+    "DataFrame Row Filtering": {
+        "prefix": "pdfilter",
+        "body": [
+            "filtered_df = df[df[\"${1:column}\"] ${2:operator} ${3:value}]"
+        ],
+        "description": "Filter rows by condition"
+    },
+    "Scikit-learn Import": {
+        "prefix": "impsklearn",
+        "body": [
+            "from sklearn.model_selection import train_test_split",
+            "from sklearn.linear_model import ${1:LinearRegression}",
+            "from sklearn.metrics import ${2:mean_squared_error, r2_score}",
+            "from sklearn.cluster import KMeans",
+            "from sklearn.preprocessing import StandardScaler",
+            "from sklearn.pipeline import Pipeline"
+        ],
+        "description": "Import common Scikit-learn modules"
+    },
+    "Train-Test Split": {
+        "prefix": "sktts",
+        "body": [
+            "X_train, X_test, y_train, y_test = train_test_split(${1:X}, ${2:y}, test_size=${3:0.2}, random_state=${4:42})"
+        ],
+        "description": "Split data into training and testing sets"
+    },
+    "Linear Regression Model": {
+        "prefix": "sklr",
+        "body": [
+            "model = LinearRegression()",
+            "model.fit(X_train, y_train)",
+            "y_pred = model.predict(X_test)",
+            "mse = mean_squared_error(y_test, y_pred)",
+            "r2 = r2_score(y_test, y_pred)",
+            "print(f\"Mean Squared Error: {mse}\")",
+            "print(f\"R^2 Score: {r2}\")"
+        ],
+        "description": "Create, train, and evaluate a Linear Regression model"
+    },
+    "KMeans Clustering": {
+        "prefix": "skkmeans",
+        "body": [
+            "kmeans = KMeans(n_clusters=${1:3}, random_state=${2:42}, n_init=\'auto\')",
+            "kmeans.fit(${3:X_scaled})",
+            "labels = kmeans.labels_",
+            "centroids = kmeans.cluster_centers_"
+        ],
+        "description": "Perform KMeans clustering"
+    },
+    "Model Evaluation Metrics": {
+        "prefix": "skmetrics",
+        "body": [
+            "from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, classification_report",
+            "",
+            "accuracy = accuracy_score(${1:y_true}, ${2:y_pred})",
+            "precision = precision_score(${1:y_true}, ${2:y_pred}${3:, average=\'weighted\'})",
+            "recall = recall_score(${1:y_true}, ${2:y_pred}${3:, average=\'weighted\'})",
+            "f1 = f1_score(${1:y_true}, ${2:y_pred}${3:, average=\'weighted\'})",
+            "conf_matrix = confusion_matrix(${1:y_true}, ${2:y_pred})",
+            "class_report = classification_report(${1:y_true}, ${2:y_pred})",
+            "",
+            "print(f\"Accuracy: {accuracy}\")",
+            "print(f\"Precision: {precision}\")",
+            "print(f\"Recall: {recall}\")",
+            "print(f\"F1 Score: {f1}\")",
+            "print(f\"Confusion Matrix:\n{conf_matrix}\")",
+            "print(f\"Classification Report:\n{class_report}\")"
+        ],
+        "description": "Calculate and print common classification metrics"
+    },
+    "Import OS": {
+        "prefix": "impos",
+        "body": [
+            "import os"
+        ],
+        "description": "Import os module for operating system functionalities"
+    },
+    "Import JSON": {
+        "prefix": "impjson",
+        "body": [
+            "import json"
+        ],
+        "description": "Import json module for JSON data handling"
+    },
+    "Import Matplotlib": {
+        "prefix": "impmatplotlib",
+        "body": [
+            "import matplotlib.pyplot as plt"
+        ],
+        "description": "Import Matplotlib for plotting"
+    },
+    "Import Seaborn": {
+        "prefix": "impseaborn",
+        "body": [
+            "import seaborn as sns"
+        ],
+        "description": "Import Seaborn for statistical visualizations"
+    },
+    "TensorFlow Minimal Model": {
+        "prefix": "tfbase",
+        "body": [
+            "import tensorflow as tf",
+            "model = tf.keras.Sequential([",
+            "    tf.keras.layers.Dense(1, input_shape=[1])",
+            "])",
+            "model.compile(optimizer='sgd', loss='mean_squared_error')"
+        ],
+        "description": "TensorFlow最简线性回归模型"
+    },
+    "TensorFlow Tensor Creation": {
+        "prefix": "tftensor",
+        "body": [
+            "import tensorflow as tf",
+            "a = tf.constant([1, 2, 3])",
+            "b = tf.Variable(tf.random.normal([3, 3]))"
+        ],
+        "description": "TensorFlow张量创建"
+    },
+    "TensorFlow Model Training": {
+        "prefix": "tftrain",
+        "body": [
+            "model.fit(x_train, y_train, epochs=10, batch_size=32, validation_split=0.2)"
+        ],
+        "description": "TensorFlow模型训练"
+    },
+    "TensorFlow Save/Load Model": {
+        "prefix": "tfsave",
+        "body": [
+            "model.save('my_model.h5')",
+            "# 加载模型",
+            "model = tf.keras.models.load_model('my_model.h5')"
+        ],
+        "description": "TensorFlow模型保存与加载"
+    },
+    "TensorFlow GPU Check": {
+        "prefix": "tfgpu",
+        "body": [
+            "import tensorflow as tf",
+            "print(tf.config.list_physical_devices('GPU'))"
+        ],
+        "description": "TensorFlow检测GPU"
+    },
+    "PyTorch Minimal Model": {
+        "prefix": "ptbase",
+        "body": [
+            "import torch",
+            "import torch.nn as nn",
+            "class Net(nn.Module):",
+            "    def __init__(self):",
+            "        super().__init__()",
+            "        self.fc = nn.Linear(1, 1)",
+            "    def forward(self, x):",
+            "        return self.fc(x)",
+            "model = Net()"
+        ],
+        "description": "PyTorch最简线性模型"
+    },
+    "PyTorch Tensor Creation": {
+        "prefix": "pttensor",
+        "body": [
+            "import torch",
+            "a = torch.tensor([1, 2, 3])",
+            "b = torch.randn(3, 3)"
+        ],
+        "description": "PyTorch张量创建"
+    },
+    "PyTorch Model Training Loop": {
+        "prefix": "pttrain",
+        "body": [
+            "optimizer = torch.optim.SGD(model.parameters(), lr=0.01)",
+            "loss_fn = nn.MSELoss()",
+            "for epoch in range(10):",
+            "    optimizer.zero_grad()",
+            "    output = model(x_train)",
+            "    loss = loss_fn(output, y_train)",
+            "    loss.backward()",
+            "    optimizer.step()"
+        ],
+        "description": "PyTorch模型训练循环"
+    },
+    "PyTorch Save/Load Model": {
+        "prefix": "ptsave",
+        "body": [
+            "torch.save(model.state_dict(), 'model.pth')",
+            "# 加载模型",
+            "model.load_state_dict(torch.load('model.pth'))"
+        ],
+        "description": "PyTorch模型保存与加载"
+    },
+    "PyTorch GPU Check": {
+        "prefix": "ptgpu",
+        "body": [
+            "import torch",
+            "print(torch.cuda.is_available())"
+        ],
+        "description": "PyTorch检测GPU"
+    }
+}

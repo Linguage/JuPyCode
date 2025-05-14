@@ -1,0 +1,144 @@
+{
+    "Julia Function Definition": {
+        "prefix": "jlfun",
+        "body": [
+            "function ${1:function_name}(${2:parameters})",
+            "    \"${3:Docstring for function.}\"",
+            "    ${4:pass}",
+            "end"
+        ],
+        "description": "Function definition with docstring"
+    },
+    "Julia If-Else Statement": {
+        "prefix": "jlif",
+        "body": [
+            "if ${1:condition}",
+            "    ${2:action}",
+            "else",
+            "    ${3:alternative_action}",
+            "end"
+        ],
+        "description": "If-else statement"
+    },
+    "Julia For Loop": {
+        "prefix": "jlfor",
+        "body": [
+            "for ${1:item} in ${2:iterable}",
+            "    ${3:action}",
+            "end"
+        ],
+        "description": "For loop"
+    },
+    "Julia While Loop": {
+        "prefix": "jlwhile",
+        "body": [
+            "while ${1:condition}",
+            "    ${2:action}",
+            "end"
+        ],
+        "description": "While loop"
+    },
+    "Julia Try-Catch Statement": {
+        "prefix": "jltry",
+        "body": [
+            "try",
+            "    ${1:action}",
+            "catch ${2:e}",
+            "    ${3:error_handling}",
+            "end"
+        ],
+        "description": "Try-catch statement"
+    },
+    "Julia Module Import": {
+        "prefix": "jlimport",
+        "body": [
+            "import ${1:ModuleName}"
+        ],
+        "description": "Import a module"
+    },
+    "Julia Using Package": {
+        "prefix": "jlusing",
+        "body": [
+            "using ${1:PackageName}"
+        ],
+        "description": "Load a package"
+    },
+    "Julia Struct Definition": {
+        "prefix": "jlstruct",
+        "body": [
+            "struct ${1:StructName}",
+            "    ${2:field1}::${3:Type1}",
+            "    ${4:field2}::${5:Type2}",
+            "end"
+        ],
+        "description": "Struct definition"
+    },
+    "Julia Print Line": {
+        "prefix": "jlprintln",
+        "body": [
+            "println(\"${1:message}\")"
+        ],
+        "description": "Print a line to console"
+    },
+    "Julia Create Matrix": {
+        "prefix": "jlmatrix",
+        "body": [
+            "${1:matrix_name} = [${2:1} ${3:2}; ${4:3} ${5:4}]"
+        ],
+        "description": "Create a 2x2 matrix"
+    },
+    "Julia Matrix Multiplication": {
+        "prefix": "jlmatmul",
+        "body": [
+            "${3:result_matrix} = ${1:matrix_a} * ${2:matrix_b}"
+        ],
+        "description": "Matrix multiplication"
+    },
+    "Julia Import DataFrames": {
+        "prefix": "jlimportdf",
+        "body": [
+            "using DataFrames"
+        ],
+        "description": "Import DataFrames package"
+    },
+    "Julia Create DataFrame": {
+        "prefix": "jldf",
+        "body": [
+            "df = DataFrame(A = 1:${1:3}, B = [\"X\", \"Y\", \"Z\"])"
+        ],
+        "description": "Create a DataFrame"
+    },
+    "Julia Read CSV with DataFrames": {
+        "prefix": "jlreadcsv",
+        "body": [
+            "using CSV, DataFrames",
+            "df = CSV.read(\"${1:filename.csv}\", DataFrame)"
+        ],
+        "description": "Read CSV file into a DataFrame"
+    },
+    "Julia Write CSV with DataFrames": {
+        "prefix": "jlwritecsv",
+        "body": [
+            "using CSV, DataFrames",
+            "CSV.write(\"${1:filename.csv}\", ${2:df})"
+        ],
+        "description": "Write DataFrame to CSV file"
+    },
+    "Julia Import Plots": {
+        "prefix": "jlimportplots",
+        "body": [
+            "using Plots"
+        ],
+        "description": "Import Plots package"
+    },
+    "Julia Basic Line Plot": {
+        "prefix": "jlplot",
+        "body": [
+            "using Plots",
+            "x = 1:${1:10}",
+            "y = rand(${1:10})",
+            "plot(x, y, label=\"${2:My Plot}\", xlabel=\"X-axis\", ylabel=\"Y-axis\")"
+        ],
+        "description": "Create a basic line plot"
+    }
+}
